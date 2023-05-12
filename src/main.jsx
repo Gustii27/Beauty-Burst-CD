@@ -12,11 +12,11 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <ItemListContainer />,
+    element: <NavBar/>,
   },
   {
     path: "/cart",
-    element: <ItemListContainer />,
+    element: <CartWidget/>,
   },
 ]);
 

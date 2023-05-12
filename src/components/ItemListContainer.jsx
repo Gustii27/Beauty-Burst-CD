@@ -4,7 +4,7 @@ function ItemListContainer(){
     return(
         <div>
             <h1>esto es una prueba</h1>
-            <Link>
+            <Link to="/CartWidget">
                 <button>ir carrito</button>
             </Link>
         </div>
