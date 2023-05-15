@@ -1,0 +1,32 @@
+[{
+    "id": 1,
+    "titulo": "Base de maquillaje - Loreal",
+    "categoria": "rostro",
+    "stock": 10,
+    "image": "https://farmacityar.vteximg.com.br/arquivos/ids/179038-600-600/163942_Base-Fluida-de-Ma---L-Oreal-Paris_imagen-1.jpg?v=636674650394870000",
+    "precio": 4700
+},
+{
+    "id": 2,
+    "titulo": "Lapiz de labios - Rimmel",
+    "categoria": "labios",
+    "stock": 12,
+    "image": "https://farmacityar.vteximg.com.br/arquivos/ids/224043-600-600/228494_labial-rimmel-lasting-finish_imagen-1.jpg?v=637908116447470000",
+    "precio": 2700
+},
+{
+    "id": 3,
+    "titulo": "Mascara de pestañas - Maybelline",
+    "categoria": "ojos",
+    "stock": 8,
+    "image": "https://farmacityar.vteximg.com.br/arquivos/ids/183735-600-600/208908_mascara-de-pestanas-the-falsies-volum-express-waterproof-very-black-x-9-ml_imagen-1.jpg?v=636887123214400000",
+    "precio": 2500
+},
+{
+    "id": 4,
+    "titulo": "Set de brochas de Maquillaje - Get The Look",
+    "categoria": "ojos",
+    "stock": 5,
+    "image": "https://farmacityar.vteximg.com.br/arquivos/ids/223176-600-600/222480_set-de-brocha-de-maquillaje-get-the-look-negro-tornasolado-x-5-un_imagen-2.jpg?v=637885961328300000",
+    "precio": 4000
+}]

@@ -1,12 +1,29 @@
-import {Link} from  "react-router-dom";
+import listProducts from "./listProducts.json";
+import { useState, useEffect } from "react";
+import ItemList from "./ItemList";
 
-function ItemListContainer(){
+const ItemListContainer = () => {
+    const [item, setItem] = useState([]);
+    
+    useEffect(() => {
+        const promise = new Promise ((resolve) => {
+            setTimeout(() => {
+                resolve (id ? listProducts.filter(item => item.categoria === id) : listProducts)
+            }, 2000)
+        });
+
+        promise.then((data) => {
+            setItem(data)
+        })
+    }, [id]);   
+    
     return(
         <div>
-            <h1>esto es una prueba</h1>
-            <Link to="/cart">
-                <button>ir carrito</button>
-            </Link>
+            <div className="container">
+                <div className="row">
+                    <ItemList item={item} />
+                </div>
+            </div>
         </div>
     );
 }
