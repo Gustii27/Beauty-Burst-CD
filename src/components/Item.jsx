@@ -1,9 +1,8 @@
-// COMPONENTE DE CADA TARJETA DE PRODUCTOS // 
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 
-const ItemList = (props) => {
+const Item = (props) => {
     return(
         <Col lg={3}>
         <Card style={{ width: '18rem' }}>
@@ -22,4 +21,4 @@ const ItemList = (props) => {
     )
 }
 
-export default ItemList;
+export default Item;

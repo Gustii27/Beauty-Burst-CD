@@ -3,25 +3,25 @@ import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 
 const ItemListContainer = () => {
-    const [item, setItem] = useState([]);
+    const [items, setItems] = useState([]);
     
     useEffect(() => {
         const promise = new Promise ((resolve) => {
             setTimeout(() => {
-                resolve (id ? listProducts.filter(item => item.categoria === id) : listProducts)
+                resolve (listProducts)
             }, 2000)
         });
 
         promise.then((data) => {
-            setItem(data)
+            setItems(data)
         })
-    }, [id]);   
+    }, []);   
     
     return(
         <div>
             <div className="container">
                 <div className="row">
-                    <ItemList item={item} />
+                    <ItemList items={items} />
                 </div>
             </div>
         </div>
