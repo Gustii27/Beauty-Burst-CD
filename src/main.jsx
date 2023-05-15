@@ -8,11 +8,12 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import ItemList from './components/ItemList';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <ItemListContainer/>,
+    element: <ItemList/>,
   },
   {
     path: "/cart",

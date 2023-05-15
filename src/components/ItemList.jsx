@@ -1,15 +1,33 @@
 // COMPONENTE DE CADA TARJETA DE PRODUCTOS, DEPENDIENTO DE LA CATEGORÍA //
-import listaProductos from "./listProducts.json";
+import listProducts from "./listProducts.json";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Item from "./Item";
+import { useEffect, useState } from "react";
 
-const ItemList = ({item}) => {
+const ItemList = () => {
+    const [products, setProducts] = useState([])
+
+    const getProducts = async () =>{
+        const response = await fetch(listProducts)
+        const data = await response.json()
+        setProducts(data.categoria)
+    }   
+    
+    useEffect(() =>{
+        getProducts()
+    }, [])
+    
     return(
-        <div className="row">
-            <div className="col-md-4 offset-md-4">
-                <img src={item.image} className="img-fluid" alt={item.title}/>
-                <h1>{item.title}</h1>
-                <p>$ {item.precio}</p>
-            </div>
-        </div>
+        <Container fluid>
+            <Row>
+                {products.map(p => <Item
+                key={p.id}
+                nombre={p.titulo}
+                image={p.image}
+                />)}
+            </Row>
+        </Container>
     )
 }
 
