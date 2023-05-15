@@ -1,9 +1,13 @@
+//Componente encargado de hacer la solicitud y tratar la promesa,
+//lo guarda en un estado y se lo pasa por props a ItemList.
 import listProducts from "./listProducts.json";
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
+    const {id} = useParams();
     
     useEffect(() => {
         const promise = new Promise ((resolve) => {
@@ -13,9 +17,13 @@ const ItemListContainer = () => {
         });
 
         promise.then((data) => {
-            setItems(data)
+            if (id) {
+                setItems(data.filter((item) => item.categoria === id))
+            }else {
+                setItems(data)
+            }
         })
-    }, []);   
+    }, [id]);   
     
     return(
         <div>

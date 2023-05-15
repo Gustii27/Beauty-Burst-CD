@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import NavBar from "./components/NavBar";
 import CartWidget from "./components/CartWidget";
 import ItemListContainer from "./components/ItemListContainer";
+import Root from './components/Root';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   createBrowserRouter,
@@ -12,7 +13,11 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <ItemListContainer/>,
+    element: <Root/>,
+  },
+  {
+    path: "/category/:id",
+    element: <Root/>,
   },
   {
     path: "/cart",
@@ -24,7 +29,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <NavBar/>
     <RouterProvider router={router} />
   </React.StrictMode>
 );

@@ -1,0 +1,1 @@
+//ItemDetail => recibe un objeto, imprime los datos y llama al componente contador.
