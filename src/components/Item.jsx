@@ -2,6 +2,7 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
+import { NavLink } from 'react-router-dom';
 
 const Item = (props) => {
     return(
@@ -15,7 +16,7 @@ const Item = (props) => {
         <Card.Text>
           <p>${props.precio}</p>
         </Card.Text>
-        <Button variant="primary">Ver Detalle</Button>
+        <Button variant="primary" as={NavLink} to="/item/:id">Ver Detalle</Button>
         </Card.Body>
         </Card>
         </Col>

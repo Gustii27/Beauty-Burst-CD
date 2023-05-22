@@ -7,6 +7,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import RootItem from './components/RootItem';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/category/:id",
     element: <Root/>,
+  },
+  {
+    path: "/item/:id",
+    element: <RootItem/>,
   },
   {
     path: "/cart",
