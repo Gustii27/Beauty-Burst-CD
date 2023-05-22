@@ -15,7 +15,7 @@ const Item = (props) => {
         <Card.Text>
           <p>${props.precio}</p>
         </Card.Text>
-        <Button variant="primary">Comprar</Button>
+        <Button variant="primary">Ver Detalle</Button>
         </Card.Body>
         </Card>
         </Col>
