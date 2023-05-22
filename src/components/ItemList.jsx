@@ -10,6 +10,7 @@ const ItemList = ({items}) => {
             <Row>
                 {items.map(p => <Item
                 key={p.id}
+                id={p.id}
                 titulo={p.titulo}
                 image={p.image}
                 precio={p.precio}
