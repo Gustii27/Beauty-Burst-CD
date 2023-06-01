@@ -14,6 +14,7 @@ const ItemList = ({items}) => {
                 titulo={p.titulo}
                 image={p.image}
                 precio={p.precio}
+                marca={p.marca}
                 />)}
             </Row>
         </Container>

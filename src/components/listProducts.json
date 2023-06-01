@@ -1,6 +1,7 @@
 [{
     "id": 1,
-    "titulo": "Base de maquillaje - Loreal",
+    "titulo": "Base de maquillaje",
+    "marca": "Loreal",
     "categoria": "rostro",
     "stock": 10,
     "image": "https://farmacityar.vteximg.com.br/arquivos/ids/179038-600-600/163942_Base-Fluida-de-Ma---L-Oreal-Paris_imagen-1.jpg?v=636674650394870000",
@@ -8,7 +9,8 @@
 },
 {
     "id": 2,
-    "titulo": "Lapiz de labios - Rimmel",
+    "titulo": "Lapiz de labios",
+    "marca": "Rimmel",
     "categoria": "labios",
     "stock": 12,
     "image": "https://farmacityar.vteximg.com.br/arquivos/ids/224043-600-600/228494_labial-rimmel-lasting-finish_imagen-1.jpg?v=637908116447470000",
@@ -16,7 +18,8 @@
 },
 {
     "id": 3,
-    "titulo": "Mascara de pestañas - Maybelline",
+    "titulo": "Mascara de pestañas",
+    "marca": "Maybelline",
     "categoria": "ojos",
     "stock": 8,
     "image": "https://farmacityar.vteximg.com.br/arquivos/ids/183735-600-600/208908_mascara-de-pestanas-the-falsies-volum-express-waterproof-very-black-x-9-ml_imagen-1.jpg?v=636887123214400000",
@@ -24,9 +27,91 @@
 },
 {
     "id": 4,
-    "titulo": "Set de brochas de Maquillaje - Get The Look",
+    "titulo": "Set de brochas de Maquillaje",
+    "marca": "Get The Look",
     "categoria": "ojos",
     "stock": 5,
     "image": "https://farmacityar.vteximg.com.br/arquivos/ids/223176-600-600/222480_set-de-brocha-de-maquillaje-get-the-look-negro-tornasolado-x-5-un_imagen-2.jpg?v=637885961328300000",
     "precio": 4000
+},
+{
+    "id": 5,
+    "titulo": "Base de maquillaje Tono claro - Pretty Fresh",
+    "marca": "Colour Pop",
+    "precio": 6720,
+    "categoria": "rostro",
+    "stock": 10,
+    "image": "https://cdn.shopify.com/s/files/1/1338/0845/products/4200929001554-Hydrating-Setting-Mist-PFSettingMist-Hydrating-1_720x1080.jpg?v=1668561884"
+},
+{
+    "id": 6,
+    "titulo": "Base de maquillaje Tono Medio - Pretty Fresh",
+    "marca": "Colour Pop",
+    "precio": 6720,
+    "categoria": "rostro",
+    "stock": 12,
+    "image": "https://cdn.shopify.com/s/files/1/1338/0845/products/6797820624978-Medium-11-PFPressedPowder-Medium11-4.jpg?v=1677532904"
+},
+{
+    "id": 7,
+    "titulo": "KVD BEAUTY - Good Apple Skin - Perfecting Hydrating Foundation Balm - Tono Medium",
+    "marca": "KVD Beauty",
+    "precio": 16000,
+    "categoria": "rostro",
+    "stock": 10,
+    "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/443/725/products/53ed4c4f-3334-490e-8b18-90f0cfa1fc251-e3c4cbda86e28d3f8716535214527510-640-0.jpeg"
+},
+{
+    "id": 8,
+    "titulo": "Brow Cream - Tono Hazelnut",
+    "marca": "Morphe",
+    "precio": 5250,
+    "categoria": "rostro",
+    "stock": 8,
+    "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/443/725/products/hazelnut1-e10eb5a445c1afd21716279545925453-640-0.jpg"
+},
+{
+    "id": 9,
+    "titulo": "Concealer - Tono Medium",
+    "marca": "Colour Pop",
+    "precio": 4320,
+    "categoria": "rostro",
+    "stock": 8,
+    "image": "https://cdn.shopify.com/s/files/1/1338/0845/products/4344141807698-Medium-100-W-PFConcealer-Medium100W-1.jpg?v=1668562344"
+},
+{
+    "id": 10,
+    "titulo": "Mascara de pestañas - Air Volume Mega Black",
+    "marca": "Loreal",
+    "precio": 6400,
+    "categoria": "ojos",
+    "stock": 8,
+    "image": "https://www.lorealparis.com.ar/-/media/project/loreal/brand-sites/oap/americas/ar/products/maquillaje/maquillaje-para-rostro/airvolume30h/oap---make-up---eye---air-volume-30h---2021---packshot-front-1-v2.png?w=360&rev=eebe03ec8fc34f9e84f8e8e06e713e7e&hash=0CAC8E39D031F480630A7D93166455179AA5C31C"
+},
+{
+    "id": 11,
+    "titulo": "Mascara de pestañas - The Falsies Lash Lift",
+    "marca": "Maybelline",
+    "precio": 5300,
+    "categoria": "ojos",
+    "stock": 8,
+    "image": "https://http2.mlstatic.com/D_NQ_NP_833924-MLA42258496827_062020-O.webp"
+},
+{
+    "id": 12,
+    "titulo": "Labial - Super Stay Ink Crayon Mate",
+    "marca": "Maybelline",
+    "precio": 3000,
+    "categoria": "labios",
+    "stock": 8,
+    "image": "https://http2.mlstatic.com/D_NQ_NP_665207-MLA50905086325_072022-O.webp"
+},
+{
+    "id": 13,
+    "titulo": "Labial - Superstay Matte Ink Liquido",
+    "marca": "Maybelline",
+    "precio": 2800,
+    "categoria": "labios",
+    "stock": 8,
+    "image": "https://http2.mlstatic.com/D_NQ_NP_961774-MLA54725683348_032023-O.webp"
 }]

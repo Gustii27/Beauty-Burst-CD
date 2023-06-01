@@ -8,13 +8,16 @@ const Item = (props) => {
     return(
         <Col lg={3}>
         <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={props.image} />
+        <Card.Img fluid variant="top" src={props.image} />
         <Card.Body>
         <Card.Title>
             <h4>{props.titulo}</h4>
         </Card.Title>
         <Card.Text>
-          <p>${props.precio}</p>
+          <h6>{props.marca}</h6>
+        </Card.Text>
+        <Card.Text>
+          <p>${props.precio}.-</p>
         </Card.Text>
         <Button variant="primary" as={NavLink} to={`/item/${props.id}`}>Ver Detalle</Button>
         </Card.Body>
