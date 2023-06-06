@@ -1,6 +1,8 @@
 //ItemDetail => recibe un objeto, imprime los datos y llama al componente contador.
 import React from "react";
 import ItemCount from "./ItemCount";
+import Card from 'react-bootstrap/Card';
+import "./item.css";
 
 const ItemDetail = ({item}) => {
     const onAdd = (quantity) => {
@@ -8,17 +10,20 @@ const ItemDetail = ({item}) => {
     }
     
     return (
-        <div className="row">
-            <div className="col-md-4 offset-md-4">
-                <img src={item.image} className="img-fluid" alt={item.titulo}></img>
-                <h1>{item.titulo}</h1>
-                <p>${item.precio}</p>
-            </div>
-
-            <div>
-                <ItemCount stock = {item.stock} onAdd = {onAdd}/>
-            </div>
+        <Card className="product-card">
+        <div className="product-image">
+          <img src={item.image} alt={item.titulo} />
         </div>
+      <Card.Body>
+        <div className="product-details">
+          <h5 className="product-name">{item.titulo}</h5>
+          <p className="product-price">${item.precio}</p>
+        </div>
+        <div>
+            <ItemCount stock = {item.stock} onAdd = {onAdd}/>
+        </div>
+      </Card.Body>
+    </Card>
     )
 }
 
