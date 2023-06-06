@@ -7,7 +7,7 @@ import Item from "./Item";
 const ItemList = ({items}) => {
     return(
         <Container fluid>
-            <Row>
+            <Row className='justify-content-center'>
                 {items.map(p => <Item
                 key={p.id}
                 id={p.id}

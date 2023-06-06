@@ -3,27 +3,25 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import { NavLink } from 'react-router-dom';
+import "./item.css";
 
 const Item = (props) => {
     return(
-        <Col lg={3}>
-        <Card style={{ width: '18rem' }}>
-        <Card.Img fluid variant="top" src={props.image} />
-        <Card.Body>
-        <Card.Title>
-            <h4>{props.titulo}</h4>
-        </Card.Title>
-        <Card.Text>
-          <h6>{props.marca}</h6>
-        </Card.Text>
-        <Card.Text>
-          <p>${props.precio}.-</p>
-        </Card.Text>
-        <Button variant="primary" as={NavLink} to={`/item/${props.id}`}>Ver Detalle</Button>
-        </Card.Body>
-        </Card>
-        </Col>
-    )
-}
+      <Card className="product-card">
+        <div className="product-image">
+          <img src={props.image} alt={props.titulo} />
+        </div>
+      <Card.Body>
+        <div className="product-details">
+          <h5 className="product-name">{props.titulo}</h5>
+          <p className="product-price">${props.precio}</p>
+        </div>
+        <Button variant="primary" as={NavLink} to={`/item/${props.id}`} className="product-button">
+          Ver detalle
+        </Button>
+      </Card.Body>
+    </Card>
+  );
+};
 
 export default Item;

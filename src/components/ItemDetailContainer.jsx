@@ -21,13 +21,11 @@ const ItemDetailContainer = () => {
     }, [id]);
 
     return (
-        <div>
             <div className="container">
                 <div className="row">
                     <ItemDetail item={item} />
                 </div>
             </div>
-        </div>
     )
 
 }
