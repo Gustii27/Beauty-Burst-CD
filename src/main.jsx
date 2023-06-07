@@ -8,6 +8,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import RootItem from './components/RootItem';
+import "./styles/global.css";
 
 const router = createBrowserRouter([
   {

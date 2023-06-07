@@ -2,7 +2,7 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { NavLink } from 'react-router-dom';
-import "./item.css";
+
 
 const Item = (props) => {
     return(

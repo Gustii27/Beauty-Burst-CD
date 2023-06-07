@@ -2,7 +2,6 @@
 import React from "react";
 import ItemCount from "./ItemCount";
 import Card from 'react-bootstrap/Card';
-import "./item.css";
 
 const ItemDetail = ({item}) => {
     const onAdd = (quantity) => {

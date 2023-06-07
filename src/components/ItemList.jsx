@@ -1,5 +1,3 @@
-//toma la prop que le pasa ItemListContainer y hace un map,
-//recorre el array de productos y por cada objeto crea un componnete Item.
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Item from "./Item";
