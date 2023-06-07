@@ -8,7 +8,7 @@ const Item = (props) => {
     return(
       <Card className="product-card">
         <div className="product-image">
-          <img src={props.image} alt={props.titulo} />
+          <img src={props.imagen} alt={props.titulo} />
         </div>
       <Card.Body>
         <div className="product-details">
