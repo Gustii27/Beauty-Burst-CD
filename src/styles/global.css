@@ -59,3 +59,9 @@
 body {
     background-color: #eef2ff;
 }
+
+/* Detalle productos */
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,5 +1,3 @@
-//Componente encargado de hacer la solicitud y tratar la promesa,
-//lo guarda en un estado y se lo pasa por props a ItemList.
 import listProducts from "./listProducts.json";
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
