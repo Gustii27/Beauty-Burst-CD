@@ -6,8 +6,8 @@ import ItemDetailContainer from './ItemDetailContainer'
 const RootItem = () => {
   return (
     <>
-        <NavBar/>
-        <ItemDetailContainer />
+      <NavBar/>
+      <ItemDetailContainer />
     </>
   )
 }
