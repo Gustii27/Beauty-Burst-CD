@@ -9,6 +9,7 @@ import {
 import RootItem from './components/RootItem';
 import RootCart from "./components/RootCart";
 import "./styles/global.css";
+import CustomProvider from './components/CartContext';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -51,6 +52,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
+    <CustomProvider>
     <RouterProvider router={router} />
+    </CustomProvider>
   </React.StrictMode>
 );

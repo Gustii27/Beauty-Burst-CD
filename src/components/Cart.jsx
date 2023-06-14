@@ -2,6 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import { getFirestore, collection, addDoc, updateDoc, doc } from "firebase/firestore";
+import { Container } from "react-bootstrap";
 
 function Cart() {
     const { productsAdded } = useContext(CartContext);
