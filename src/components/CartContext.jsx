@@ -38,7 +38,7 @@ export function CustomProvider({ children }) {
     function isInCart(product) {
         return productsAdded.some((productAdded) => productAdded.id === product.id);
     }
-
+    console.log(productsAdded);
     return (
         <CartContext.Provider value={{ productsAdded, onAdd, removeItem, clear, isInCart }}>
             {children}
