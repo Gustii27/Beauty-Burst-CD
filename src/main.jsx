@@ -7,11 +7,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import RootItem from './components/RootItem';
+import RootCart from "./components/RootCart";
 import "./styles/global.css";
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import CartWidget from './components/CartWidget';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/cart",
-    element: <CartWidget/>,
+    element: <RootCart/>,
   },
 ]);
 
