@@ -28,8 +28,7 @@ export function CustomProvider({ children }) {
     }
 
     function removeItem(itemId) {
-        const deleteItem = productsAdded((prevState) => prevState.filter((productAdded) => productAdded.id !== itemId));
-        setProductsAdded(deleteItem);
+        setProductsAdded((prevState) => prevState.filter((productAdded) => productAdded.id !== itemId));
     }
 
     function clear() {
@@ -39,7 +38,7 @@ export function CustomProvider({ children }) {
     function isInCart(product) {
         return productsAdded.some((productAdded) => productAdded.id === product.id);
     }
-
+    console.log(productsAdded);
     return (
         <CartContext.Provider value={{ productsAdded, addToCart, removeItem, clear, isInCart }}>
             {children}
