@@ -28,7 +28,8 @@ export function CustomProvider({ children }) {
     }
 
     function removeItem(itemId) {
-        setProductsAdded((prevState) => prevState.filter((productAdded) => productAdded.id !== itemId));
+        const deleteItem = productsAdded((prevState) => prevState.filter((productAdded) => productAdded.id !== itemId));
+        setProductsAdded(deleteItem);
     }
 
     function clear() {
