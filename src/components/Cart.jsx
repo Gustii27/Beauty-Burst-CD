@@ -8,18 +8,24 @@ function Cart() {
     const { productsAdded } = useContext(CartContext);
     const db = getFirestore();
 
-    function updateOrder(productId, finalStock) {
-        const itemRef = doc(db, "items", productId);
+    function updateOrder(id, finalStock) {
+        const itemRef = doc(db, "items", id);
         updateDoc(itemRef, { stock: finalStock }).catch((error) => console.log({ error }));
     }
 
     function sendOrder() {
         const collectionRef = collection(db, "orders");
-        const total = productsAdded.reduce((acc, product) => acc + product.quantity * product.price, 0);
+        const total = productsAdded.reduce((acc, product) => acc + product.quantity * product.precio, 0);
 
         const order = {
             buyer: { name: "Gustavo", email: "ejemplo@gmail.com", phone: "00000" },
-            items: productsAdded,
+            items: productsAdded.map((product) => ({
+                categoria: product.categoria,
+                stock: product.stock,
+                imagen: product.imagen,
+                precio: product.precio,
+                titulo: product.titulo,
+            })),
             total,
         };
 
@@ -37,9 +43,9 @@ function Cart() {
         <Container>
             {productsAdded.map((product) => (
                 <div key={product.id}>
-                    <span>Name: {product.title}</span>
+                    <span>Nombre: {product.titulo}</span>
                     <br />
-                    <span>Quantity: {product.quantity}</span>
+                    <span>Cantidad: {product.quantity}</span>
                 </div>
             ))}
 
