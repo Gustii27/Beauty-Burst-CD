@@ -6,7 +6,7 @@ export const CartContext = createContext();
 export function CustomProvider({ children }) {
     const [productsAdded, setProductsAdded] = useState([]);
 
-    function onAdd(product, quantity) {
+    function addToCart(product, quantity) {
         const isAlreadyAdded = isInCart(product);
 
         if (isAlreadyAdded) {
@@ -38,9 +38,9 @@ export function CustomProvider({ children }) {
     function isInCart(product) {
         return productsAdded.some((productAdded) => productAdded.id === product.id);
     }
-    console.log(productsAdded);
+
     return (
-        <CartContext.Provider value={{ productsAdded, onAdd, removeItem, clear, isInCart }}>
+        <CartContext.Provider value={{ productsAdded, addToCart, removeItem, clear, isInCart }}>
             {children}
         </CartContext.Provider>
     );

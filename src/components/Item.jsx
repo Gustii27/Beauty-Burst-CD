@@ -1,4 +1,3 @@
-//Item => recibe la prop de objeto y lo muestra, da pie a la navegacion dinamica al detalle del producto.
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { NavLink } from 'react-router-dom';
