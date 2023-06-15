@@ -7,9 +7,10 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from "react-router-dom";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function Cart() {
-    const { productsAdded, removeItem } = useContext(CartContext);
+    const { productsAdded, removeItem, clear } = useContext(CartContext);
     const db = getFirestore();
 
     function updateOrder(id, finalStock) {
@@ -43,6 +44,8 @@ function Cart() {
             .catch((error) => console.log({ error }));
     }
 
+    const total = productsAdded.reduce((acc, product) => acc + product.quantity * product.precio, 0);
+
     return (
         <Container className="d-flex justify-content-center align-items-center mt-5">
             <Card style={{ width: "30rem" }}>
@@ -53,10 +56,13 @@ function Cart() {
                             <ListGroup.Item key={product.id} className="d-flex justify-content-between align-items-center">
                                 <div>
                                     <div>
-                                        <span>Nombre del Producto: {product.titulo}</span>
+                                        <span>Nombre del producto: {product.titulo}</span>
                                     </div>
                                     <div>
-                                        <span>Cantidad Productos: {product.quantity}</span>
+                                        <span>Cantidad productos: {product.quantity}</span>
+                                    </div>
+                                    <div>
+                                    <span>Precio Total: ${product.quantity * product.precio}</span>
                                     </div>
                                 </div>
                                 <div>
@@ -65,9 +71,13 @@ function Cart() {
                             </ListGroup.Item>
                         ))}
                     </ListGroup>
+                    <div className="mt-3">
+                        <span>Total a pagar: {productsAdded.reduce((acc, product) => acc + product.quantity * product.precio, 0)}</span>
+                    </div>
                     <div className="d-flex justify-content-between mt-3">
                         <Button variant="primary" onClick={sendOrder} style={{ color: "black", backgroundColor: "#d8b4fe", borderColor: "#d8b4fe" }}>Pagar</Button>
                         <Link to="/" className="btn btn-outline-primary" style={{ color: "black", backgroundColor: "#d8b4fe", borderColor: "#d8b4fe" }}>Ir a los productos</Link>
+                        <Button variant="danger" onClick={clear} style={{ color: "black", backgroundColor: "#d8b4fe", borderColor: "#d8b4fe" }}>Vaciar carrito</Button>
                     </div>
                 </Card.Body>
             </Card>
