@@ -1,6 +1,6 @@
 /* Items */
 .product-card {
-    width: 300px !important;
+    width: 350px !important;
     margin: 10px;
   }
   
@@ -8,8 +8,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px;
-    width: 150px;
+    height: 250px;
+    width: 250px;
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto;

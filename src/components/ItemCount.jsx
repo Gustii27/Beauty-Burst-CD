@@ -23,17 +23,37 @@ const ItemCount = ({ onAdd, stock }) =>{
 
     return (
         <div className="container">
-            <div className="btn-group" role="group" aria-label="Basic outline example">
-                <button type="button" className="btn btn-outline-primary" onClick={decrementStock}>-</button>
-                <button type="button" className="btn btn-outline-primary">{counter}</button>
-                <button type="button" className="btn btn-outline-primary" onClick={incrementStock}>+</button>
+          <div className="btn-group d-flex justify-content-center" role="group" aria-label="Basic outline example">
+            <button type="button" className="btn btn-outline-primary" onClick={decrementStock} style={{ color: "black", backgroundColor: "#d8b4fe", borderColor: "#6d28d9" }}>
+              -
+            </button>
+            <button type="button" className="btn btn-outline-primary" style={{ color: "black", backgroundColor: "#d8b4fe", borderColor: "#6d28d9" }}>
+              {counter}
+            </button>
+            <button type="button" className="btn btn-outline-primary" onClick={incrementStock} style={{ color: "black", backgroundColor: "#d8b4fe", borderColor: "#6d28d9" }}>
+              +
+            </button>
+          </div>
+          <div className="row mt-3 justify-content-center">
+            <div className="col-6">
+              <button type="button" className="btn btn-outline-primary btn-block" onClick={handleAddToCart} style={{ color: "white", backgroundColor: "#6d28d9", borderColor: "#6d28d9" }}>
+                Agregar al carrito
+              </button>
             </div>
-            <div className="row">
-                <button type="button" className="btn btn-outline-primary" onClick={handleAddToCart}>Agregar al carrito</button>
-                <Link to="/" className="btn btn-outline-primary">Atrás</Link>
+            <div className="col-6 d-flex justify-content-center">
+          <Link
+            to="/"
+            className="btn btn-outline-primary"
+            style={{ color: "black", backgroundColor: "#d8b4fe", borderColor: "#6d28d9", width: "100%" }}
+          >
+            <span className="align-items-center" style={{ height: "100%" }}>
+              Volver al listado
+            </span>
+          </Link>
             </div>
+          </div>
         </div>
-    )
+      );
 }
 
 export default ItemCount;
