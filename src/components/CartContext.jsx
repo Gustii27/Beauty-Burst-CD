@@ -28,8 +28,18 @@ export function CustomProvider({ children }) {
     }
 
     function removeItem(itemId) {
-        setProductsAdded((prevState) => prevState.filter((productAdded) => productAdded.id !== itemId));
-    }
+        const updatedProducts = productsAdded.map((productAdded) => {
+          if (productAdded.id === itemId) {
+            return {
+              ...productAdded,
+              quantity: productAdded.quantity - 1,
+            };
+          }
+          return productAdded;
+        });
+    
+        setProductsAdded(updatedProducts.filter((productAdded) => productAdded.quantity > 0));
+      }
 
     function clear() {
         setProductsAdded([]);

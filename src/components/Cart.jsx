@@ -72,10 +72,10 @@ function Cart() {
                         ))}
                     </ListGroup>
                     <div className="mt-3">
-                        <span>Total a pagar: {productsAdded.reduce((acc, product) => acc + product.quantity * product.precio, 0)}</span>
+                        <span>Total a pagar: ${productsAdded.reduce((acc, product) => acc + product.quantity * product.precio, 0)}</span>
                     </div>
                     <div className="d-flex justify-content-between mt-3">
-                        <Button variant="primary" onClick={sendOrder} style={{ color: "black", backgroundColor: "#d8b4fe", borderColor: "#d8b4fe" }}>Pagar</Button>
+                        <Button variant="primary" onClick={sendOrder} style={{ color: "white", backgroundColor: "#6d28d9", borderColor: "#6d28d9" }}>Pagar</Button>
                         <Link to="/" className="btn btn-outline-primary" style={{ color: "black", backgroundColor: "#d8b4fe", borderColor: "#d8b4fe" }}>Ir a los productos</Link>
                         <Button variant="danger" onClick={clear} style={{ color: "black", backgroundColor: "#d8b4fe", borderColor: "#d8b4fe" }}>Vaciar carrito</Button>
                     </div>
